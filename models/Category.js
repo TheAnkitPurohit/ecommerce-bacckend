@@ -7,10 +7,12 @@ const categorySchmea = new mongoose.Schema(
       trim: true,
       unique: true,
       required: true,
-      maxLength: String,
+      maxLength: 32,
     },
   },
   { timestamps: true }
 );
 
-module.exports = mongoose.model("Category", categorySchmea);
+const Category = mongoose.model("Category", categorySchmea);
+
+module.exports = Category;

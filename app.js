@@ -20,6 +20,8 @@ app.use(cors());
 
 // path
 const authroutes = require("./routes/auth");
+const userRoutes = require("./routes/user");
+const categoryRoutes = require("./routes/category");
 
 // routing
 app.get("/", (req, res) => {
@@ -29,6 +31,8 @@ app.get("/", (req, res) => {
 });
 
 app.use("/api/auth", authroutes);
+app.use("/api", userRoutes);
+app.use("/api", categoryRoutes);
 
 // listening
 
